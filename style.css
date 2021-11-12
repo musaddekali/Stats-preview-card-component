@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+:root {
+  --deep-blue: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --white-75: hsla(0, 0%, 100%, 0.75);
+  --white-60: hsla(0, 0%, 100%, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+  background: var(--deep-blue);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  max-width: 1110px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card-left {
+  padding: 68px;
+  background-color: var(--card-bg);
+  flex: 1;
+  flex-basis: 50%;
+}
+.card-right {
+  flex: 1;
+  flex-basis: 50%;
+}
+.card-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 26px;
+  line-height: 1.3;
+  color: var(--white);
+}
+.card-title span {
+  color: var(--violet);
+}
+.card-desc {
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: 76px;
+  color: var(--white-60);
+}
+.card-services {
+  display: flex;
+}
+.card-service {
+  padding: 0 29px;
+}
+.card-service h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.card-service p {
+  font-size: 12px;
+  margin: 0;
+  color: var(--white-60);
+  text-transform: uppercase;
+}
+.card-service:first-child {
+  padding-left: 0;
+}
+.card-image {
+  position: relative;
+}
+.card-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--violet);
+  opacity: 0.6;
+}
+.card-image img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Responsive  */
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 86px 22px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+  .card-left {
+    padding: 44px;
+    flex-basis: auto;
+    text-align: center;
+  }
+  .card-right {
+    order: -1;
+    flex-basis: auto;
+  }
+  .card-title {
+    margin-bottom: 18px;
+  }
+  .card-desc {
+    margin-bottom: 38px;
+    font-size: 15px;
+  }
+  .card-services {
+    flex-direction: column;
+  }
+  .card-service {
+    margin-bottom: 30px;
+    margin: 0 0 30px 0;
+    padding: 0;
+  }
+  .card-service:last-child {
+    margin-bottom: 0;
+  }
+  .card-service p {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
